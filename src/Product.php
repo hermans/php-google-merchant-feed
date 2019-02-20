@@ -301,12 +301,7 @@ class Product
      * @throws InvalidArgumentException
      */
     public function setCondition($condition)
-    {
-        if (!in_array($condition, [
-            Condition::NEW, Condition::REFURBISHED, Condition::USED,
-        ])) {
-            throw new InvalidArgumentException("Invalid condition property");
-        }
+    {       
         $this->setAttribute('condition', $condition, false);
         return $this;
     }
